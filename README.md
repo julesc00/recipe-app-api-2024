@@ -153,3 +153,21 @@ exclude =
     settings.py
 ```
 8. Command to run flake8: `docker-compose run --rm app sh -c "flake8"`
+**Note:** ***Encountered an error with the Dockerfile and haven't been able to solve it,
+so I've created the local environment as well to continue with the course.***
+
+**Above issue solved--Debugging Docker**  
+```aiignore
+docker-compose down
+docker rm -f $(docker ps -aq)
+docker system prune
+docker volume prune
+docker-compose build
+docker-compose up
+```
+
+### Create GitHub Actions config
+
+## Section Configure Database
+Download the official alpine postgres image from `hub.docker.com/postgres`
+
